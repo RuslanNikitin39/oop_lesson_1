@@ -111,55 +111,54 @@ def get_lecturer_avg_score(lecturers, course):
             result += sum(grades)/len(grades)
     return f' Средняя оценка преподавателей за лекции курса {course}: {result:,.2f}\n'
 
-# set values
-reviewer1 = Reviewer('Matthew', 'Stone')
-reviewer1.courses_attached += ['Python']
-reviewer1.courses_attached += ['Git']
-
-lecturer1 = Lecturer('John', 'Carter')
-lecturer1.courses_attached += ['Python']
-
-lecturer2 = Lecturer('Jack', 'Russell')
-lecturer2.courses_attached += ['Git']
-
-student1 = Student('Eric', 'Cartman', 'm')
-student1.courses_in_progress += ['Python']
-student1.courses_in_progress += ['Git']
-student1.finished_courses += ['Introduction to programming']
-
-reviewer1.rate_hw(student1, 'Python', 10)
-reviewer1.rate_hw(student1, 'Python', 15)
-reviewer1.rate_hw(student1, 'Python', 8)
-reviewer1.rate_hw(student1, 'Git', 8)
-reviewer1.rate_hw(student1, 'Git', 9)
-reviewer1.rate_hw(student1, 'Git', 6)
-
-student1.rate_hw(lecturer1, 'Python', 12)
-student1.rate_hw(lecturer1, 'Python', 8)
-student1.rate_hw(lecturer1, 'Python', 5)
-student1.rate_hw(lecturer2, 'Git', 10)
-student1.rate_hw(lecturer2, 'Git', 8)
-
-student2 = Student('Kyle', 'Broflovski', 'm')
-student2.courses_in_progress += ['Python']
-student2.courses_in_progress += ['Git']
-student2.finished_courses += ['Introduction to programming']
-
-reviewer1.rate_hw(student2, 'Python', 8)
-reviewer1.rate_hw(student2, 'Python', 9)
-reviewer1.rate_hw(student2, 'Python', 10)
-reviewer1.rate_hw(student2, 'Git', 7)
-reviewer1.rate_hw(student2, 'Git', 10)
-reviewer1.rate_hw(student2, 'Git', 10)
-
-student2.rate_hw(lecturer1, 'Python', 7)
-student2.rate_hw(lecturer1, 'Python', 8)
-student2.rate_hw(lecturer1, 'Python', 5)
-student2.rate_hw(lecturer2, 'Git', 10)
-student2.rate_hw(lecturer2, 'Git', 6)
-
 
 def main():
+    # set values
+    reviewer1 = Reviewer('Matthew', 'Stone')
+    reviewer1.courses_attached += ['Python']
+    reviewer1.courses_attached += ['Git']
+
+    lecturer1 = Lecturer('John', 'Carter')
+    lecturer1.courses_attached += ['Python']
+
+    lecturer2 = Lecturer('Jack', 'Russell')
+    lecturer2.courses_attached += ['Git']
+
+    student1 = Student('Eric', 'Cartman', 'm')
+    student1.courses_in_progress += ['Python']
+    student1.courses_in_progress += ['Git']
+    student1.finished_courses += ['Introduction to programming']
+
+    reviewer1.rate_hw(student1, 'Python', 10)
+    reviewer1.rate_hw(student1, 'Python', 15)
+    reviewer1.rate_hw(student1, 'Python', 8)
+    reviewer1.rate_hw(student1, 'Git', 8)
+    reviewer1.rate_hw(student1, 'Git', 9)
+    reviewer1.rate_hw(student1, 'Git', 6)
+
+    student1.rate_hw(lecturer1, 'Python', 12)
+    student1.rate_hw(lecturer1, 'Python', 8)
+    student1.rate_hw(lecturer1, 'Python', 5)
+    student1.rate_hw(lecturer2, 'Git', 10)
+    student1.rate_hw(lecturer2, 'Git', 8)
+
+    student2 = Student('Kyle', 'Broflovski', 'm')
+    student2.courses_in_progress += ['Python']
+    student2.courses_in_progress += ['Git']
+    student2.finished_courses += ['Introduction to programming']
+
+    reviewer1.rate_hw(student2, 'Python', 8)
+    reviewer1.rate_hw(student2, 'Python', 9)
+    reviewer1.rate_hw(student2, 'Python', 10)
+    reviewer1.rate_hw(student2, 'Git', 7)
+    reviewer1.rate_hw(student2, 'Git', 10)
+    reviewer1.rate_hw(student2, 'Git', 10)
+
+    student2.rate_hw(lecturer1, 'Python', 7)
+    student2.rate_hw(lecturer1, 'Python', 8)
+    student2.rate_hw(lecturer1, 'Python', 5)
+    student2.rate_hw(lecturer2, 'Git', 10)
+    student2.rate_hw(lecturer2, 'Git', 6)
 
     print(reviewer1)
 
